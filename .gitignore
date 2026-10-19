@@ -1,4 +1,19 @@
-# Logs
+# Es el tipico archivo (aqui no lo usamos) en el que se guardan contraseñas
+.env
+
+# La carpeta node_modules/ incluye librerias
+# Las gestionaremos nosotros haciendo npm install <nombre-libreria>
+node_modules
+
+# La build (pagina web para producción) se guarda en dist/
+# La creamos con npm run build
+dist
+dist-ssr
+
+# Se usa en react para secretos
+*.local
+
+# Logs. Pueden ocupar mucho espacio
 logs
 *.log
 npm-debug.log*
@@ -7,10 +22,6 @@ yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
-node_modules
-dist
-dist-ssr
-*.local
 
 # Editor directories and files
 .vscode/*

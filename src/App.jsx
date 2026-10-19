@@ -2,8 +2,46 @@ import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import './App.css'
 
-function App() {
+// Componente personalizado
+function UsarEstados() {
+
+  //    VARIABLE   ESTADO
   const [clicks, setClicks] = useState(0)
+
+      return (
+      <section className="card">
+
+              <h2>⚡ Motor de Renderizado Reactivo</h2>
+              <p>
+                React no recarga la página para actualizar la vista: calcula los cambios en el <em>Virtual DOM</em> y
+                modifica de forma eficiente y fluida únicamente los elementos necesarios en pantalla.
+              </p>
+
+              <div className="interactive-box">
+                <p>Demostración de estado (<span className="code-pill">useState</span>):</p>
+                <div className="counter-num">{clicks}</div>
+                <div className="button-group">
+                  <button 
+                    type="button" 
+                    className="btn-primary" 
+                    onClick={() => setClicks((prev) => prev + 1)}
+                  >
+                    Incrementar contador
+                  </button>
+                  <button 
+                    type="button" 
+                    className="btn-secondary" 
+                    onClick={() => setClicks(0)}
+                  >
+                    Reiniciar
+                  </button>
+                </div>
+              </div>
+        </section>
+  );
+}
+
+function App() {
 
   return (
     <div className="app-container">
@@ -51,35 +89,8 @@ function App() {
           </div>
         </section>
 
-        {/* Demostración interactiva de renderizado reactivo */}
-        <section className="card">
-          <h2>⚡ Motor de Renderizado Reactivo</h2>
-          <p>
-            React no recarga la página para actualizar la vista: calcula los cambios en el <em>Virtual DOM</em> y
-            modifica de forma eficiente y fluida únicamente los elementos necesarios en pantalla.
-          </p>
-
-          <div className="interactive-box">
-            <p>Demostración de estado (<span className="code-pill">useState</span>):</p>
-            <div className="counter-num">{clicks}</div>
-            <div className="button-group">
-              <button 
-                type="button" 
-                className="btn-primary" 
-                onClick={() => setClicks((prev) => prev + 1)}
-              >
-                Incrementar contador
-              </button>
-              <button 
-                type="button" 
-                className="btn-secondary" 
-                onClick={() => setClicks(0)}
-              >
-                Reiniciar
-              </button>
-            </div>
-          </div>
-        </section>
+        {/* Nuestro componentes son etiquetas html personalizadas */}
+        <UsarEstados></UsarEstados>
 
         {/* Guía didáctica de la estructura con NPM */}
         <section className="info-banner">
