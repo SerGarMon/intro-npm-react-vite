@@ -47,12 +47,8 @@ function App() {
           <img src={reactLogo} className="logo react" alt="React logo" />
         </div>
         <h1 className="title">Introducción a React</h1>
-        <p>Proyecto didáctico con <strong>NPM</strong> y componentes <strong>JSX</strong></p>
-        <div className="badge-row">
-          <span className="badge">NPM & package.json</span>
-          <span className="badge">Archivos .jsx</span>
-          <span className="badge">Vite</span>
-        </div>
+        <p>Proyecto con <strong>NPM</strong>. <strong>Vite</strong> como servidor.</p>
+
       </header>
 
       {/* Contenido Principal requerido */}
