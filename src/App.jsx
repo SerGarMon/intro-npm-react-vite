@@ -2,42 +2,38 @@ import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import './App.css'
 
-// Componente personalizado
+// Un componente personalizado esta en otro archivo.
+import TopWikipedia from './components/TopWikipedia';
+
+// Otro componente personalizado
 function UsarEstados() {
 
-  //    VARIABLE   ESTADO
+  //    VARIABLE   MODIFICADOR
   const [clicks, setClicks] = useState(0)
 
-      return (
-      <section className="card">
+  return (
 
-              <h2>⚡ Motor de Renderizado Reactivo</h2>
-              <p>
-                React no recarga la página para actualizar la vista: calcula los cambios en el <em>Virtual DOM</em> y
-                modifica de forma eficiente y fluida únicamente los elementos necesarios en pantalla.
-              </p>
+          <div className="interactive-box">
+            <p>Demostración de estado (<span className="code-pill">useState</span>):</p>
+            <div className="counter-num">{clicks}</div>
+            <div className="button-group">
+              <button className="btn-primary" 
 
-              <div className="interactive-box">
-                <p>Demostración de estado (<span className="code-pill">useState</span>):</p>
-                <div className="counter-num">{clicks}</div>
-                <div className="button-group">
-                  <button 
-                    type="button" 
-                    className="btn-primary" 
-                    onClick={() => setClicks((prev) => prev + 1)}
-                  >
-                    Incrementar contador
-                  </button>
-                  <button 
-                    type="button" 
-                    className="btn-secondary" 
-                    onClick={() => setClicks(0)}
-                  >
-                    Reiniciar
-                  </button>
-                </div>
-              </div>
-        </section>
+                // Al hacer click usamos el modificador. También describimos el siguiente modificador
+                onClick={() => setClicks((prev) => prev + 1)}
+              
+              >
+                Incrementar contador
+              </button>
+              <button className="btn-secondary" 
+
+                onClick={() => setClicks(0)}
+              
+              >
+                Reiniciar
+              </button>
+            </div>
+          </div>
   );
 }
 
@@ -89,21 +85,37 @@ function App() {
           </div>
         </section>
 
-        {/* Nuestro componentes son etiquetas html personalizadas */}
-        <UsarEstados></UsarEstados>
+        <section className="card">
+
+              <h2>⚡ Motor de Renderizado Reactivo</h2>
+              <p>
+                React no recarga la página para actualizar la vista: calcula los cambios en el <em>Virtual DOM</em> y
+                modifica de forma eficiente y fluida únicamente los elementos necesarios en pantalla.
+              </p>
+
+              {/* Nuestro componentes son etiquetas html personalizadas */}
+              <UsarEstados></UsarEstados>
+        </section>
+
+        {/* Abril y cerral a la vez*/}
+        <TopWikipedia />
 
         {/* Guía didáctica de la estructura con NPM */}
         <section className="info-banner">
-          <h4>🎓 ¿Qué hemos aprendido en este paso con NPM?</h4>
+          <h4>¿QUÉ SETUP HEMOS HECHO?</h4>
           <ul>
             <li>
-              <strong>Gestor de paquetes (NPM):</strong> Usamos <span className="code-pill">package.json</span> para declarar dependencias como <code>react</code> y <code>react-dom</code>.
+              Para iniciar un proyecto de react con vite usamos <code>npm create vite@latest</code>.
+              Se crea un archivo llamado <span className="code-pill">package.json</span> que <b> declara </b> las dependencias (escribe su nombre). 
             </li>
             <li>
-              <strong>Archivos JSX:</strong> El código de interfaz se encuentra separado en componentes con extensión <span className="code-pill">.jsx</span> (como <code>src/App.jsx</code> y <code>src/main.jsx</code>).
+              <strong>Gestor de paquetes (NPM):</strong> Usamos <code>npm install</code> para que se instalen las dependencias como <code>react</code> y <code>react-dom</code>.
             </li>
             <li>
-              <strong>Control de versiones:</strong> Se incluye el archivo <span className="code-pill">.gitignore</span> para no subir la carpeta <code>node_modules</code> a Git.
+              <strong>Archivos JSX:</strong> El código de interfaz se encuentra separado en componentes con extensión <span className="code-pill">.jsx</span> (como <code>src/App.jsx</code> y <code>src/main.jsx</code>). Es un lenguaje que combina javascript y html.
+            </li>
+            <li>
+              Leete el archivo <span className="code-pill">.gitignore</span>. Este es importante para no subir la carpeta <code>node_modules</code> a Git.
             </li>
           </ul>
         </section>
