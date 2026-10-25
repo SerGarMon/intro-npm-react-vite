@@ -6,7 +6,7 @@ import './App.css'
 import TopWikipedia from './components/TopWikipedia';
 
 // Otro componente personalizado
-function UsarEstados() {
+function ComponenteBasico() {
 
   //    VARIABLE   MODIFICADOR
   const [clicks, setClicks] = useState(0)
@@ -51,7 +51,7 @@ function App() {
 
       </header>
 
-      {/* Contenido Principal requerido */}
+      {/* Contenido Principal*/}
       <main>
         <section className="card">
           <h2>📌 Definición de React</h2>
@@ -90,7 +90,7 @@ function App() {
               </p>
 
               {/* Nuestro componentes son etiquetas html personalizadas */}
-              <UsarEstados></UsarEstados>
+              <ComponenteBasico></ComponenteBasico>
         </section>
 
         {/* Abril y cerral a la vez*/}
