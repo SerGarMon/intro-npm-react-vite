@@ -52,7 +52,7 @@ El componente es una escena 3D.
 Esta vez, debes separar el código en otro componente
 Se adjunta el componente `PlanetScene.jsx` y un archivo con los modelos y animaciones `.glb`. El archivo `.glb` debe ir a la carpeta `public/`. Esta carpeta es duplicada en la build final.
 
-El componente necesita una dependencia de
+El componente necesita una dependencia de renderizado 3D para web. Investiga cuál es y añádela.
 
 El componente es el fondo de la web, por lo que da igual dónde lo añadas.
 
