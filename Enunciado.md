@@ -97,6 +97,7 @@ export default defineConfig({
   base: '/nombre-de-tu-repo-de-despliegue/', // Añade esto
 })
 ```
+Y después, vuelve a hacer la build
  
 
 
