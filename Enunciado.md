@@ -87,3 +87,16 @@ Haciendo `npm run build` crearas una versión comprimida, estática, pensada par
 Crea un repositorio nuevo (no habrá conflicto con el anterior porque esta carpeta está excluida del otro repositorio). Después, subelo a github para poder hacer un despliegue en github pages. 
 
 Hay una posibilidad de que no encuentre la ruta del archivo `.glb` correctamente. Si es así, intenta leer la consola de la web y modificar la ruta en la build para encontrarlo correctamente.
+
+### Un posible fallo a solucionar de la build
+Como la web desplegada tiene la forma `username.github.io/nombre-repo`, al buscar los archivos en la raíz puede haber fallos. Una solución que hemos encontrado es añadir la línea `
+base` al archivo `vite.config.js`
+```js
+export default defineConfig({
+  plugins: [react()],
+  base: '/nombre-de-tu-repo-de-despliegue/', // Añade esto
+})
+```
+ 
+
+
